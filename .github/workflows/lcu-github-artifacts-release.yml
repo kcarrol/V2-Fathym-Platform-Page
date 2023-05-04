@@ -68,7 +68,7 @@ jobs:
         with:
           files: 'package.json'
 
-      # replace text in package.json for main branch
+      # replace text in package.json for main branch 
       - name: replace version text for main branch
         if: ${{ steps.vars.outputs.branchName == env.MainBranch && steps.package_json_exists.outputs.files_exists == 'true' }}
         shell: pwsh
