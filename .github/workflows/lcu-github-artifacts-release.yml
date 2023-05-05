@@ -69,7 +69,7 @@ jobs:
           files: 'package.json'
 
       # replace text in package.json for main branch 
-      - name: replace version text for main branch
+      - name: replace version text for main branch 
         if: ${{ steps.vars.outputs.branchName == env.MainBranch && steps.package_json_exists.outputs.files_exists == 'true' }}
         shell: pwsh
         run: (Get-Content -path package.json -Raw) -replace "version patch","version ${{ steps.versionBump.outputs.new_tag }} --no-git-tag-version -f" | Set-Content -Path package.json
