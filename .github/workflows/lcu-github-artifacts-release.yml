@@ -107,7 +107,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ github.event.organization.name }}-${{ github.event.repository.name }}
-          path: ${{ env.Output }} 
+          path: ${{ env.Output }}
 
       # bump version and push tag
       - name: Bump version and push tag
